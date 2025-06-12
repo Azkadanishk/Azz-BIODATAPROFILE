@@ -1,6 +1,17 @@
 body {
     background: linear-gradient(#9a08dd 0%, #dd4c4f 40%, #7420d3 100%);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -5px;
+  line-height: 0;
+}
 
 .profile {
     display: flex;
