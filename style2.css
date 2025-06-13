@@ -19,6 +19,9 @@ body {
     font-size: 18px;
     margin-left: 20px;
 }
+.switch {
+    color: white;
+}
 
 .footer {
     text-align: center;
