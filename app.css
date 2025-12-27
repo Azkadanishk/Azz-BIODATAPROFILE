@@ -134,3 +134,55 @@ a {
   transform: scale(0.95); 
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+/* --- PHOTOGRAPHY GALLERY START --- */
+.photo-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden; /* Biar gambar ga keluar kotak pas di-zoom */
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    aspect-ratio: 4/3; /* Bikin semua foto ukurannya seragam (kotak persegi panjang) */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Biar foto ga gepeng meski ukurannya beda-beda */
+    transition: transform 0.5s ease;
+}
+
+/* Efek Overlay Gelap pas Hover */
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Awalnya transparan */
+    transition: opacity 0.3s ease;
+}
+
+.photo-overlay i {
+    color: white;
+    font-size: 2rem;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+/* Animasi pas Mouse Nempel */
+.photo-card:hover img {
+    transform: scale(1.1); /* Gambar nge-zoom dikit */
+}
+
+.photo-card:hover .photo-overlay {
+    opacity: 1; /* Overlay muncul */
+}
+
+.photo-card:hover .photo-overlay i {
+    transform: scale(1); /* Icon expand muncul */
+}
+/* --- PHOTOGRAPHY GALLERY END --- */
