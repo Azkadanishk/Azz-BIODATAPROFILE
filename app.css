@@ -1,3 +1,16 @@
+/* --- ANIMATION CSS START --- */
+.reveal {
+  position: relative;
+  transform: translateY(100px); /* Geser ke bawah 100px */
+  opacity: 0; /* Transparan */
+  transition: all 1s ease; /* Durasi animasi 1 detik */
+}
+
+.reveal.active {
+  transform: translateY(0); /* Balik ke posisi asal */
+  opacity: 1; /* Jadi terlihat */
+}
+/* --- ANIMATION CSS END --- */
 body {
     background: linear-gradient(#9a08dd 0%, #dd4c4f 40%, #7420d3 100%);
 }
@@ -35,9 +48,12 @@ svg {
 }
 .footer {
     padding-bottom: 20px;
-    background-color: #fff;
+    background-color: #fff; 
     text-align: center;
     padding-top: 20px;
+    overflow: hidden; 
+    margin-bottom: 0; 
+    position: relative; 
 }
 .contact {
     color: black;
@@ -75,4 +91,46 @@ a {
 
 .row {
     padding: 0px 10px;
+}
+/* --- CUSTOM BUTTON RESEARCH START --- */
+.btn-research {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); 
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 15px 35px;
+  border: 2px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: all 0.4s ease; 
+  backdrop-filter: blur(5px); 
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.btn-research:hover {
+  background: #ffffff; 
+  color: #7420d3; /
+  border-color: #ffffff;
+  transform: translateY(-3px) scale(1.05); 
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7); 
+}
+
+.btn-research i {
+  transition: transform 0.3s ease;
+}
+
+.btn-research:hover i {
+  transform: translateX(5px); 
+}
+
+
+.btn-research:active {
+  transform: scale(0.95); 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
